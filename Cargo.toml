@@ -1,0 +1,16 @@
+[package]
+name = "helloworld-tonic"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]] # Bin to run the HelloWorld gRPC server
+name = "helloworld-server"
+path = "src/server.rs"
+
+[dependencies]
+prost = "0.13.2"
+tokio = { version = "1.40.0", features = ["full"] }
+tonic = "0.12.2"
+
+[build-dependencies]
+tonic-build = "0.12.2"
